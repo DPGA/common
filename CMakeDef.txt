@@ -1,0 +1,9 @@
+
+set (LIB_QCUSTOMPLOT on)
+set (LIB_QWT offn)
+set (LIB_SHM on)
+set (LIB_FRAME on)
+set (DAQ	on)
+set (VISU on)
+set (QTANALYSE on)
+

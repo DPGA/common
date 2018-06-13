@@ -35,7 +35,10 @@ set (DAQ_PROJECT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../)
 #set (Libraries "pfring pthread")
 
 
-
+message(INFO ${Green} " LIB_SHM_PATH="${LIB_SHM_PATH}   ${White}) 
+message(INFO ${Green} " LIB_QCUSTOMPLOT_PATH="${LIB_QCUSTOMPLOT_PATH}   ${White}) 
+message(INFO ${Green} " LIB_DECODEFRAME_PATH="${LIB_DECODEFRAME_PATH}   ${White})
+message(INFO ${Green} " DAQ_PROJECT_PATH="${DAQ_PROJECT_PATH}   ${White})
 #set (USERLIB tinyxml)
 
 include_directories(./include/ ../include  ../libdaq/include /usr/local/include)
@@ -52,6 +55,10 @@ add_library(librt STATIC IMPORTED)
 add_library(libringshm SHARED IMPORTED)
 add_library(libqwt STATIC IMPORTED)
 
+
+
+
+
 if(LIB_QCUSTOMPLOT MATCHES "on") 
 	add_subdirectory(../Lib/libqcustomplot "${CMAKE_CURRENT_BINARY_DIR}/libqcustomplot")
 	message(INFO ${Blue} " Add libqcustomplot" ${White})
@@ -65,7 +72,6 @@ endif()
 if(LIB_SHM MATCHES "on") 
 	add_subdirectory(../Lib/libshm "${CMAKE_CURRENT_BINARY_DIR}/libshm")
 	message(INFO ${Blue} " Add Libshm"   ${White})
-	message(INFO ${Blue} ${LIB_SHM_PATH}   ${White}) 
 endif()
 
 

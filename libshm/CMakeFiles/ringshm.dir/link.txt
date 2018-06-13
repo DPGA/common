@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -std=c++11 -O2 -Wall -D ENABLE_BPF -Wextra -Wno-unused-parameter -ggdb -g -pthread  -shared -Wl,-soname,libringshm.so -o /home/daq/DPGA/build/lib/libringshm.so CMakeFiles/ringshm.dir/src/ringshm.cpp.o  -L/usr/local/lib  -L/home/daq/DPGA/common/lib/build 

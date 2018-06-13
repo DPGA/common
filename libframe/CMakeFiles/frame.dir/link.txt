@@ -1,2 +1,0 @@
-/usr/bin/ar qc /home/daq/DPGA/build/lib/libframe.a  CMakeFiles/frame.dir/src/decodeframe.cpp.o
-/usr/bin/ranlib /home/daq/DPGA/build/lib/libframe.a

@@ -6,4 +6,5 @@ set (LIB_FRAME on)
 set (DAQ	on)
 set (VISU on)
 set (QTANALYSE on)
+set (QTDCS on)
 

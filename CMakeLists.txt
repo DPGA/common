@@ -95,4 +95,7 @@ if(QTANALYSE MATCHES "on")
 	message(INFO ${Blue} " Add QTanalyse" ${White})
 endif()
 
-
+if(QTDCS MATCHES "on") 
+	add_subdirectory(../QtDcs "${CMAKE_CURRENT_BINARY_DIR}/QtDcs")
+	message(INFO ${Blue} " Add QtDcs" ${White})
+endif()

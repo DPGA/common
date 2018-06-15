@@ -32,6 +32,7 @@ set (LIB_QCUSTOMPLOT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../Lib/libqcustomplot)
 set (LIB_SHM_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../Lib/libshm)
 set (LIB_DECODEFRAME_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../Lib/libframe)
 set (DAQ_PROJECT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../)
+set (DAQ_COMMON ${CMAKE_CURRENT_SOURCE_DIR})
 #set (Libraries "pfring pthread")
 
 

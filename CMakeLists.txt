@@ -100,3 +100,9 @@ if(QTDCS MATCHES "on")
 	add_subdirectory(../Dcs "${CMAKE_CURRENT_BINARY_DIR}/QtDcs")
 	message(INFO ${Blue} " Add QtDcs" ${White})
 endif()
+
+MESSAGE(INFO ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_command(TARGET ${CMAKE_CURRENT_BINARY_DIR}/bin/daqdpga    POST_BUILD 
+   COMMAND ${CMAKE_COMMAND} -E echo " Copying doc1temp.h to doc1.h."
+   COMMENT "toto est ici"
+   )

@@ -91,6 +91,11 @@ if(VISU MATCHES "on")
 	message(INFO ${Blue} " Add Visu" ${White} )
 endif()
 
+if(VISUQWT MATCHES "on") 
+	add_subdirectory(../Monitoring/visuqwt "${CMAKE_CURRENT_BINARY_DIR}/visuqwt")
+	message(INFO ${Blue} " Add Visuqwt" ${White} )
+endif()
+
 if(QTANALYSE MATCHES "on") 
 	add_subdirectory(../Analyse/QtAnalyse "${CMAKE_CURRENT_BINARY_DIR}/QtAnalyses")
 	message(INFO ${Blue} " Add QTanalyse" ${White})

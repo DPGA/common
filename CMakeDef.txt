@@ -7,4 +7,4 @@ set (DAQ	on)
 set (VISU on)
 set (QTANALYSE on)
 set (QTDCS on)
-
+set (HVPROG on)

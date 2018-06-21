@@ -11,7 +11,7 @@
 #include <thread>
 
 
-enum  eCmd {IPCNONE=0,IPCDAQ=1,IPCSTOP=2,IPCINTERVAL=3,IPCRECORD=4};
+enum  eCmd {IPCNONE=0,IPCDAQ=1,IPCSTOP=2,IPCINTERVAL=3,IPCRECORD=4,IPCWITHOUTFILE=5};
 
 typedef struct _MESSAGE  {
     long nMsgType;

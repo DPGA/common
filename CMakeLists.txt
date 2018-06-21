@@ -91,6 +91,11 @@ if(VISU MATCHES "on")
 	message(INFO ${Blue} " Add Visu" ${White} )
 endif()
 
+if(VISUQWT MATCHES "on") 
+	add_subdirectory(../Monitoring/visuqwt "${CMAKE_CURRENT_BINARY_DIR}/visuqwt")
+	message(INFO ${Blue} " Add Visuqwt" ${White} )
+endif()
+
 if(QTANALYSE MATCHES "on") 
 	add_subdirectory(../Analyse/QtAnalyse "${CMAKE_CURRENT_BINARY_DIR}/QtAnalyses")
 	message(INFO ${Blue} " Add QTanalyse" ${White})
@@ -101,8 +106,10 @@ if(QTDCS MATCHES "on")
 	message(INFO ${Blue} " Add QtDcs" ${White})
 endif()
 
+if(HVPROG MATCHES "on") 
+	add_subdirectory(../HvProg "${CMAKE_CURRENT_BINARY_DIR}/HvProg")
+	message(INFO ${Blue} " Add HvProg" ${White})
+endif()
+
 MESSAGE(INFO ${CMAKE_CURRENT_BINARY_DIR})
-add_custom_command(TARGET ${CMAKE_CURRENT_BINARY_DIR}/bin/daqdpga    POST_BUILD 
-   COMMAND ${CMAKE_COMMAND} -E echo " Copying doc1temp.h to doc1.h."
-   COMMENT "toto est ici"
-   )
+

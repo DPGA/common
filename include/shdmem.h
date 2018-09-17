@@ -11,6 +11,8 @@
 
 #define SHM_ASM_DATA "/shm_asm_data"
 #define SHM_NETWORK "/shm_net_stats"
+#define SHM_SROUT "/shm_srout"
+
 const int MAX_ASM = 16;
 
 
@@ -42,5 +44,9 @@ struct SharedMemory {
     u_char  raw[sizeof(S_HeaderFrame) +(NB_SAMPLES+4)*NB_CHANNELS+4];
 };
 
-
+struct sHistoSrout {
+	u_char noBoard;
+	u_char nohalfDrs;
+	long HistoSrout [6][1024];
+}; 
 #endif // SHDMEM_H

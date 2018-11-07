@@ -17,36 +17,43 @@ const int MAX_ASM = 16;
 
 
 struct sStatFrame {
-	u64 NbFrameRec;
-	u64 NbFrameAsm;
-	u64 NbFrameAsmLost;
-	u64 NbFrameAsmOld;
-	u32 NbFrameAmc;
-	u_int8_t MemFeId;
-	u32 MemLen;
-	u64 ErrId;
-	u64 UnderSize;
-	u64 OverSize;
-	double deltaMillisec;
-	double delta;
-	//std::string DeviceName="abcdefghijklmnopqrstuvwxyz";  // Reserve 26 octets pour le devicename
+  u64 NbFrameRec;
+  u64 NbFrameAsm;
+  u64 NbFrameAsmLost;
+  u64 NbFrameAsmOld;
+  u32 NbFrameAmc;
+  u_int8_t MemFeId;
+  u32 MemLen;
+  u64 ErrId;
+  u64 UnderSize;
+  u64 OverSize;
+  double deltaMillisec;
+  double delta;
+  //std::string DeviceName="abcdefghijklmnopqrstuvwxyz";  // Reserve 26 octets pour le devicename
 	
-	u64 NumPkts;
-	u64 NumBytes;
-	u64 lastByte;
-	u64 lastPkts;
-	u64 DropsPkts;
-	u64 LastTriggerCount;
-	u64 TriggerCount;
+  u64 NumPkts;
+  u64 NumBytes;
+  u64 lastByte;
+  u64 lastPkts;
+  u64 DropsPkts;
+  u64 LastTriggerCount;
+  u64 TriggerCount;
+  string LastTriggerCountOrig;
+  string TriggerCountOrig;
+  u64 NumTriggerCountsFromASM;
+  u64 LastTrigTimestamp;
+  u64 TrigTimestamp;
+
+  u64 NumFrameOk;
 };
 
 struct SharedMemory {
-    u_char  raw[sizeof(S_HeaderFrame) +(NB_SAMPLES+4)*NB_CHANNELS+4];
+  u_char  raw[sizeof(S_HeaderFrame) +(NB_SAMPLES+4)*NB_CHANNELS+4];
 };
 
 struct sHistoSrout {
-	u_char noBoard;
-	u_char nohalfDrs;
-	long HistoSrout [6][1024];
+  u_char noBoard;
+  u_char nohalfDrs;
+  long HistoSrout [6][1024];
 }; 
 #endif // SHDMEM_H

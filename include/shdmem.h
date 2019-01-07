@@ -7,7 +7,8 @@
 
 #define NB_SAMPLES  1025*2
 #define NB_CHANNELS 4
-#define CAPACITY 	1000
+#define CAPACITY 	5000
+#define MAX_CHANNEL 240
 
 #define SHM_ASM_DATA "/shm_asm_data"
 #define SHM_NETWORK "/shm_net_stats"
@@ -46,6 +47,8 @@ struct sStatFrame {
   u64 NumFrameOk;
 };
 
+
+
 struct SharedMemory {
   u_char  raw[sizeof(S_HeaderFrame) +(NB_SAMPLES+4)*NB_CHANNELS+4];
 };
@@ -55,4 +58,14 @@ struct sHistoSrout {
   u_char nohalfDrs;
   long HistoSrout [6][1024];
 }; 
+
+
+struct sOneChannelEvent {
+    u_char raw[sizeof(S_HeaderFrame) + (NB_SAMPLES+4)];
+};
+
+struct sEvent {
+    u_int16_t nbChannel;
+    sOneChannelEvent *event[MAX_CHANNEL];
+};
 #endif // SHDMEM_H
